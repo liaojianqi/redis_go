@@ -4,8 +4,8 @@
 #include <iostream>
 using namespace std;
 
-#define ZSKIPLIST_MAXLEVEL 32 /* Should be enough for 2^32 elements */
-#define ZSKIPLIST_P 0.25      /* Skiplist P = 1/4 */
+#define ZSKIPLIST_MAXLEVEL 32
+#define ZSKIPLIST_P 0.25
 int zslRandomLevel(void) {
     int level = 1;
     while ((random()&0xFFFF) < (ZSKIPLIST_P * 0xFFFF))
